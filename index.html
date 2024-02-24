@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+       body {
+        background-image: url("./img.png");
+        background-color: #fd8b8b;
+    }
+
+     button {
+            background-color: #92a8;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.6
+        }
+
+        table {
+            background-color: #deeaee;
+            text-align: center;
+            padding: 15px;
+        }
+        table, th, td {
+        border: 1px solid;
+         }
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+        }
+
+    </style>
+</head>
+
+<script>
+function generateOTP() { 
+    var digits = '0123456789'; 
+    let OTP = ''; 
+    for (let i = 0; i < 5; i++ ) { 
+        OTP += digits[Math.floor(Math.random() * 10)]; 
+     } 
+     document.getElementById("t1").innerText=OTP;
+    } 
+
+</script>
+<body>
+    <table class="center">
+        <tr>
+            <th>Function</th>
+            <th>Button</th>
+            <th>Result</th>
+            </tr>
+            <tr>
+            <td>OTP</td>
+            <td>
+                <center><button onclick="generateOTP()">Click</button>
+            </td>
+            <td>
+                <h1 id="t1"></h1>
+            </td>
+        </tr>
+        </table>
+        </body></center>
+</body>
+</html>
+
